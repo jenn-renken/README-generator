@@ -9,18 +9,24 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  if (license === 'BSD') {
+    return `(https://opensource.org/licenses/BSD-3-Clause)`
+  }
   if (license === 'MIT') {
-    return `![license](https://opensource.org/licenses/MIT)`
+    return `(https://opensource.org/licenses/MIT)`
+  }
+  if (license === 'Mozilla') {
+    return `(https://opensource.org/licenses/MPL-2.0)`
   }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-    if (license !== 'none') {
-      return `License used: ${license}`
-    }
-    return ''
+  if (license !== 'none') {
+    return `This project uses ${license}`
+  }
+  return ''
 }
 
 // TODO: Create a function to generate markdown for README
@@ -47,7 +53,9 @@ function generateMarkdown(data) {
    ${data.usage}
 
   ## License
-  [![license](https://img.shields.io/badge/license-${data.license}-blue)](https://shields.io)
+  ${ renderLicenseBadge(data.license) }
+  ${ renderLicenseLink(data.license) }
+  ${ renderLicenseSection(data.license) }
 
   ## Contributing
    ${data.github}
