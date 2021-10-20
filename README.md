@@ -1,7 +1,8 @@
-#  a great project
+
+  #  A Great Title
 
   ## Description
-   test description
+   A description
 
   ## Table of Contents
   1. [Installation](#installation)
