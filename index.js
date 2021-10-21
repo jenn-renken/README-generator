@@ -86,7 +86,15 @@ const questions = [
         {
             type: 'input',
             name: 'email',
-            message: 'Please enter your email'
+            message: 'Please enter your email (Required)',
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter an email!');
+                    return false;
+                }
+            }
         }
     ];
 
@@ -104,7 +112,7 @@ function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
         console.log(userInput);
-        writeToFile('./dist/README.md', generateMarkdown(userInput));
+        writeToFile('./sample/README.md', generateMarkdown(userInput));
     });
 };
 

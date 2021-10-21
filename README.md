@@ -1,31 +1,16 @@
 
-  #  A Great Title
+  #  Professional README Generator
 
   ## Description
-   A description
-
-  ## Table of Contents
-  1. [Installation](#installation)
-  2. [Usage](#usage)
-  3. [License](#license)
-  4. [Contributing](#contributing)
-  5. [Tests](#tests)
-  6. [Questions](#questions)
+   A program written using NodeJS that prompts the user to enter information and generate a README file for their project.
  
   ## Installation
-   install it
+   - Download the code from Github repository
+   - Install NPM package
+   - Install Inquirer
 
   ## Usage
-   use it
+   - Open terminal
+   - Type 'Node index' from the root of the directory in which the program is located
+   - Answer prompts; If successful, the README file is generated
 
-  ## License
-  [![license](https://img.shields.io/badge/license-undefined-blue)](https://shields.io)
-
-  ## Contributing
-   test-test
-
-  ## Tests
-   test it
-
-  ## Questions
-  Any questions? Please contact me here: test@test.com
